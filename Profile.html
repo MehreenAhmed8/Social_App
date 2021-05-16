@@ -1,0 +1,39 @@
+<html>
+<head>
+  <style>
+    div
+        { 
+          border:2px solid black
+          height: 100%;
+          width: 100%;
+          background-image: url(fgh.jpg) 
+        }
+        #hyt
+        {
+         width:1500px; 
+         height: 600px;
+         background-repeat: no-repeat;
+
+        }
+     
+  </style>
+
+<title>Profile</title>
+
+</head>
+<body>
+  <div id="div">
+<div id="hyt">
+<h1 style=" padding-top: 50px; color: black;font-family: arial; font-size: 60px; padding-left: 50px">What Do You Want To See ?? </h1>
+
+<form name="userprofile" action="Profile" method="Get">
+<script>document.getElementById('abc').value = getAllUrlParams(window.location.href).name</script>
+<div style= "padding-left: 50px;padding-top: 20px"><input type="submit" value="PostSomething" name="button1" style=" font-family: arial; font-size: 50px"/><br></div>
+<div style= "padding-left: 50px;padding-top: 20px"><input type="submit" value="About" name="button1" ; style=" font-family: arial; font-size: 50px" /><br></div>
+<div style= "padding-left: 50px;padding-top: 20px"><input type="submit" value="Your_Posts" name="button1" style=" font-family: arial; font-size: 50px"/><br></div>
+<div style= "padding-left: 50px;padding-top: 20px"><input type="submit" value="Your_Pictures" name="button1" style=" font-family: arial; font-size: 50px"/><br></div>
+ 
+</form>
+</div>
+</body>
+</html>

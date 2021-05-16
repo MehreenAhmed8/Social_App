@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Employer's SignUp</title>
+
+<script>
+
+function validate()
+{	
+    if ( document.employer.usname.value == "" )
+	    {
+			alert("user name is empty!!");	
+			return false;
+	    }
+	if ( document.employer.uname.value == "" )
+	    {
+			alert("First name is empty!!");	
+			return false;
+	    }
+	if ( document.employer.luname.value == "" )
+	    {
+			alert("Last name is empty!!");				
+			return false;
+	    }
+	if ( document.employer.email.value == "" )		
+        {
+		alert("Please enter email address!")
+		return false;
+	    }	
+	if(document.employer.pass.value == "")	
+	   {
+			alert("password is empty!!");
+			return false;
+	   }	
+	if(document.employer.pass.value!=document.employer.confirm_pass.value)
+	{
+			alert(" Password and Confirm Password doesnt match");
+			return false;
+	}
+	if ( ( document.employer.r[0].checked == false )&& ( document.employer.r[1].checked == false ) )
+    {
+        alert ( "Please choose your Gender: Male or Female" );
+        return false;
+    }
+	if(document.employer.ph.value == "")	
+	   {
+			alert("phone no is empty!!");
+			return false;
+	   }	
+    return true;
+
+}
+
+</script>
+  
+  <style>
+    div
+    {
+      
+      border:2px solid black
+          height: 100%;
+          width: 100%;
+          background-image: url(qwe.jpg) 
+
+
+          
+        }
+
+        #hyt
+        {
+         width:1500px; 
+         height: 600px;
+         background-repeat: no-repeat;
+
+        }
+
+  </style>
+
+</head>
+
+<body>
+<div id="div">
+<div id="hyt">
+	<div style="margin-left:300px;">
+<h style="font-size:40px;color:Green " > Create Your First Account</h>
+ <form name=employer  method=Post action=SignUP onsubmit="return validate()" align=center>
+  
+  <div align=left style="font-size:20px" >
+    UserName:<input type="text" name="usname" placeholder="Must be Unique .." required><br>
+    First name:<input type="text" name="uname" placeholder="Your first name.." required>
+    Last  name:<input type="text" name="luname" placeholder=" Your last name.." required>
+	<br/><br/>
+	Email address :<input type="email" name="email" placeholder="your email.." required>
+	<br>
+	Password:<input type="password" name="pass" placeholder=" enter password.." required> 
+	Retype Password:<input type="password" name="confirm_pass" placeholder=" conform password.." required>
+	<p style="background:skyblue;color:red">Use 8 or more characters with a mix of letters , numbers and symobols </p>
+	Phone no :<input type="tel" name="ph" pattern="^\d{4}-\d{7}$" placeholder=" xxxx-xxxxxxx" required>
+    <br>
+    Choose Your Gender:<input type="radio" name="r" value="f" required>Female
+                       <input type="radio" name="r" value="m" required>Male
+    <br>	
+	<input type="Submit" value="REQUEST ACCOUNT" style=" width: 200px; background:darkblue;color:white; padding:5px; border-radius:10%;"/>
+	</div>
+  </form>
+</div>
+</div>
+</body>
+</html>
+	 
